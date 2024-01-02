@@ -1,0 +1,1 @@
+This folder will be used to create additional services like Redux, React Router, Axios, and etc.
