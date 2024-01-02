@@ -1,0 +1,1 @@
+This folder will be used to create the basic UI components like Button, Heading, Paragraph and etc.

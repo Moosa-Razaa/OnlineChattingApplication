@@ -1,0 +1,1 @@
+This folder will be used to create features of the application like Signup, Chat, and etc.
