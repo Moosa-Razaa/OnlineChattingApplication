@@ -1,0 +1,39 @@
+.mainDiv
+{
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    background-color: #EEEEEE;
+    box-sizing: border-box;
+}
+
+.mainLayout
+{
+    height: calc(100vh - 2rem);
+    width: calc(100vw - 2rem);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.sider
+{
+    background-color: #f5f7f8 !important;
+}
+
+.mainContentLayout
+{
+    margin-left: 1px;
+}
+
+.header
+{
+    height: 5rem;
+    background-color: #222831;
+}
+
+.content
+{
+    min-height: fit-content;
+    max-height: 50px;
+    background-color: #EEEEEE;
+}
