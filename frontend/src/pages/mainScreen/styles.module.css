@@ -18,6 +18,9 @@
 .sider
 {
     background-color: #f5f7f8 !important;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    overflow-y: auto;
 }
 
 .mainContentLayout

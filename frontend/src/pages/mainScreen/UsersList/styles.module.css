@@ -1,0 +1,21 @@
+.mainDiv
+{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.searchInput
+{
+    margin-bottom: 0.5rem;
+    width: 100%;
+    z-index: 1;
+}
+
+.descriptionDiv
+{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
