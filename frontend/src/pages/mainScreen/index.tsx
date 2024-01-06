@@ -2,6 +2,7 @@ import { Layout } from "antd";
 import style from "./styles.module.css";
 import UsersList from "./UsersList";
 import UserInfoHeader from "./userInfoHeader";
+import MainChat from "./MainChat";
 
 const { Header, Sider, Content } = Layout;
 
@@ -26,7 +27,9 @@ function MainScreen() {
               Status={userInfoHeaderProps.Status}
             />
           </Header>
-          <Content className={style["content"]}>Content</Content>
+          <Content className={style["content"]}>
+            <MainChat />
+          </Content>
         </Layout>
       </Layout>
     </div>
