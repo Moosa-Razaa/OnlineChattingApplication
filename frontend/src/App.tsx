@@ -1,14 +1,11 @@
-import style from "./App.module.css";
+import React from 'react';
+import LoginSignupForm from './components/LoginSignupForm';
+import "./App.module.css"
+import OTPScreen from './components/OtpScreen';
+import ProfileForm from './components/Profile';
 
-function App() {
-  
-  return (
-    <>
-      <div className={style["mainDiv"]}>
-        Main Div
-      </div>
-    </>
-  )
-}
+const App: React.FC = () => {
+  return <ProfileForm/>
+};
 
-export default App
+export default App;
