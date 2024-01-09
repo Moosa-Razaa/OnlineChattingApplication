@@ -1,12 +1,12 @@
 import { Button, Input, Typography } from "antd";
+import style from "./styles.module.css";
+import { IndividualMessage } from "../IndividualChat/types";
+import { format } from "date-fns";
 import emoji from "../../../../assets/Emoji.svg";
 import upload from "../../../../assets/Upload.svg";
 import audioRecord from "../../../../assets/AudioRecord.svg";
-import style from "./styles.module.css";
-import { IndividualMessage } from "./types";
-import { format } from "date-fns";
 
-const { Paragraph, Text } = Typography;
+const { Text, Paragraph } = Typography;
 
 const chat: IndividualMessage[] = [
   {
@@ -23,7 +23,7 @@ const chat: IndividualMessage[] = [
   },
 ];
 
-function IndividualChat() {
+export default function GroupChat() {
   return (
     <div className={style["mainDiv"]}>
       <div className={style["chatDiv"]}>
@@ -32,11 +32,11 @@ function IndividualChat() {
             <div
               id={`${currentItem.MessageId}`}
               className={`${style["messageDiv"]}
-                ${
-                  currentItem.IsReceived
-                    ? style["leftAlignedDiv"]
-                    : style["rightAlignedDiv"]
-                }`}
+              ${
+                currentItem.IsReceived
+                  ? style["leftAlignedDiv"]
+                  : style["rightAlignedDiv"]
+              }`}
             >
               <div className={style["inidividualMessage"]}>
                 <Paragraph
@@ -81,5 +81,3 @@ function IndividualChat() {
     </div>
   );
 }
-
-export default IndividualChat;
