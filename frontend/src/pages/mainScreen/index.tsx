@@ -1,7 +1,7 @@
 import { Layout } from "antd";
 import style from "./styles.module.css";
 import UsersList from "./UsersList";
-import UserInfoHeader from "./userInfoHeader";
+import UserInfoHeader from "./UserInfoHeader";
 import MainChat from "./MainChat";
 
 const { Header, Sider, Content } = Layout;
