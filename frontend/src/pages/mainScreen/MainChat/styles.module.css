@@ -10,6 +10,48 @@
 {
     width: 100%;
     height: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+}
+
+.leftAlignedDiv
+{
+    min-width: auto;
+    min-height: auto;
+    max-width: 200px;
+    max-height: 100px;
+    padding: 10px;
+    margin-left: 3rem;
+    background-color: #222831;
+    border-radius: 8px;
+}
+
+.rightAlignedDiv
+{
+    align-self: flex-end;
+    min-width: auto;
+    min-height: auto;
+    max-width: 200px;
+    max-height: 100px;
+    padding: 10px;
+    margin-right: 3rem;
+    background-color: #dbdada;
+    border-radius: 8px;
+}
+
+.message
+{
+    color: #EEEEEE;
+}
+
+.sendIcon
+{
+    color: #222831;
+}
+
+.receivedIcon
+{
+    color: #EEEEEE;
 }
 
 .textingDiv
