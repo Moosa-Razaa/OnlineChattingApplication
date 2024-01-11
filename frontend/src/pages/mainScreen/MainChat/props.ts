@@ -1,3 +1,3 @@
 export type MainChatProps = {
-    isGroupCha: boolean
+    isGroupChat: boolean
 }
