@@ -1,0 +1,113 @@
+.background {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, #eeeeee 50%, #393e46 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-div {
+  width: 90%;
+  height: 85vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  align-items: center;
+}
+
+.left {
+  width: 65%;
+}
+
+.left img {
+  width: 90%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.right {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 100%;
+}
+
+.btn {
+  background-color: #393e46;
+  width: 19rem;
+  height: 1.7rem;
+  padding: 0.8rem 1rem 2.1rem;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  color: #ffd369;
+  box-shadow: none;
+  font-size: 1rem;
+  margin-left: 6px;
+  margin: 0.2rem 0 0 8px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+.login-text {
+  color: #393e46;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 90% !important;
+  color: #393e46 !important;
+  outline: none !important;
+  text-decoration: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  background-color: #ffd369;
+}
+
+.register-button:hover {
+  color: var(--purple) !important;
+  opacity: 80% !important;
+  cursor: pointer !important;
+  font-weight: 500 !important;
+  text-decoration: underline;
+}
+
+.forgot-password {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.input {
+  margin: 0.5rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #393e46;
+  border: 1px solid #ffd369;
+  border-radius: 0.3rem;
+}
+
+.register-button {
+  color: #ffd369;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.register {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  gap: 0.2rem;
+}
