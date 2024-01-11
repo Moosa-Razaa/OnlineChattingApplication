@@ -34,21 +34,6 @@ const Profile: React.FC = () => {
     display:"block"
   };
 
-  const div = {
-    border: "2px solid black",
-    marginLeft: "4.4rem",
-    width: "6rem",
-    height: "6rem",
-    borderRadius: "50%",
-    backgroundColor: "#393E46",
-    display: "flex",
-    justifyContent: "center",
-    padding: "1rem",
-    flexDirection: "column",
-    alignItems: "center",
-    color: "white",
-  };
-
   const image = {
     width: "6rem",
     height: "6rem",
@@ -126,7 +111,7 @@ const Profile: React.FC = () => {
           </Form.Item>
 
           <Form.Item>
-            <Button block htmlType="submit" className={styles["ant-btn"]}>
+            <Button block htmlType="submit" className={styles.btn}>
               Save
             </Button>
           </Form.Item>

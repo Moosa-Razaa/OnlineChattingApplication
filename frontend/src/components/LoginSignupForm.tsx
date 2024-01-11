@@ -36,7 +36,7 @@ const LoginSignupForm: React.FC<LoginSignupFormProps> = ({ state }) => {
                 ]}
               >
                 <Input
-                  className={styles["ant-input"]}
+                  className={styles.input}
                   prefix={<UserOutlined className="site-form-item-icon" />}
                   placeholder="Username"
                 />
@@ -48,7 +48,7 @@ const LoginSignupForm: React.FC<LoginSignupFormProps> = ({ state }) => {
                 ]}
               >
                 <Input.Password
-                  className={styles["ant-input"]}
+                  className={styles.input}
                   prefix={<LockOutlined className="site-form-item-icon" />}
                   type="password"
                   placeholder="Password"
@@ -62,7 +62,7 @@ const LoginSignupForm: React.FC<LoginSignupFormProps> = ({ state }) => {
                   ]}
                 >
                   <Input
-                    className={styles["ant-input"]}
+                    className={styles.input}
                     prefix={<LockOutlined className="site-form-item-icon" />}
                     type="password"
                     placeholder="Confirm password"
@@ -91,7 +91,7 @@ const LoginSignupForm: React.FC<LoginSignupFormProps> = ({ state }) => {
               </div>
 
               <Form.Item>
-                <Button className={styles["ant-btn"]} block htmlType="submit">
+                <Button className={styles.btn} block htmlType="submit">
                   {state === "login" ? "log in" : "sign up"}
                 </Button>
                 <div className={styles.register}>

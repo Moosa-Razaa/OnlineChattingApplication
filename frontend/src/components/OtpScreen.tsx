@@ -27,12 +27,7 @@ const OTPScreen: React.FC = () => {
     <div className={styles["main-div"]}>
       <div className={styles["otp-form"]}>
         <h2 className={styles["verification-text"]}>VERIFICATION</h2>
-        <p
-          style={{
-            textAlign: "center",
-            fontSize: "1rem",
-            margin: "0 0 4rem 0",
-          }}
+        <p className={styles["info-text"]}
         >
           We have sent a four digit OTP <br /> to abc@gmail.com
         </p>
@@ -54,7 +49,7 @@ const OTPScreen: React.FC = () => {
 
           <div className={styles["button-container"]}>
             <Form.Item>
-              <Button block htmlType="submit" className={styles["ant-btn"]}>
+              <Button block htmlType="submit" className={styles.btn}>
                 Verify OTP
               </Button>
             </Form.Item>
