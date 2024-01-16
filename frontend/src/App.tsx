@@ -1,12 +1,10 @@
 import React from 'react';
 import "./App.module.css"
-import OTPScreen from './components/OTP/OtpScreen';
-import Profile from './components/profile/Profile';
-import LoginSignupForm from './components/loginn/LoginSignupForm';
+import LoginSignupForm from './pages/loginn/LoginSignupForm';
 
 
 const App: React.FC = () => {
-  return <Profile/>
+  return <LoginSignupForm formState='login'/>
 };
 
 export default App;
