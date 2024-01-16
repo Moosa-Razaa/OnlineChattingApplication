@@ -33,12 +33,14 @@ const LoginSignupForm: React.FC<LoginSignupFormProps> = ({ formState }) => {
               </h2>
 
               <CustomInput
+                maxLength={50}
                 id="username"
                 name="username"
                 type="text"
                 placeholder="Enter Username"
               />
               <CustomInput
+                maxLength={50}
                 id="password"
                 name="password"
                 type="password"
@@ -47,6 +49,7 @@ const LoginSignupForm: React.FC<LoginSignupFormProps> = ({ formState }) => {
 
               {formState === "signup" && (
                 <CustomInput
+                  maxLength={50}
                   id="confirm-password"
                   name="confirm-password"
                   type="password"
@@ -75,7 +78,7 @@ const LoginSignupForm: React.FC<LoginSignupFormProps> = ({ formState }) => {
                 )}
               </div>
 
-              <CustomButton type="submit" text={formState} block={true}>
+              <CustomButton text={formState} block={true}>
                 <div className={styles.register}>
                   {formState === "login"
                     ? "New to app"

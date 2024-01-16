@@ -1,0 +1,65 @@
+.mainDiv
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.userInformationDiv
+{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.userNameLastSeenDiv
+{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+.userName
+{
+    color: white !important;
+    margin-bottom: 0 !important;
+    margin-top: 0.5rem !important; 
+}
+
+.userStatus
+{
+    margin: 0 !important;
+    color: white;
+    font-size: 11px;
+}
+
+.settingsDiv
+{
+    width: 50%;
+    height: 100%;
+}
+
+.settingsImageButton
+{
+    /* background-color: transparent; */
+    height: 2.5rem;
+    width: 2.5rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.settingsImage
+{
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+}

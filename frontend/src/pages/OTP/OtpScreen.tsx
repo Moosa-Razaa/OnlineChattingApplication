@@ -2,6 +2,8 @@
 import React from "react";
 import { Form, Input, Button, message } from "antd";
 import styles from "./OtpScreen.module.css";
+import CustomInput from "../../components/input/Input";
+import CustomButton from "../../components/Button";
 
 const OTPScreen: React.FC = () => {
   const onFinish = (values: any) => {
@@ -48,6 +50,7 @@ const OTPScreen: React.FC = () => {
           </Form.Item>
 
           <div className={styles["button-container"]}>
+
             <Form.Item>
               <Button block htmlType="submit" className={styles.btn}>
                 Verify OTP

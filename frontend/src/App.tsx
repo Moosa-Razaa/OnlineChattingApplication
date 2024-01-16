@@ -1,10 +1,16 @@
-import React from 'react';
-import "./App.module.css"
-import LoginSignupForm from './pages/loginn/LoginSignupForm';
+import { RouterProvider } from "react-router-dom";
+import style from "./App.module.css";
+import routes from "./services/routes";
+import OTPScreen from "./pages/OTP/OtpScreen";
 
+function App() {
+  
+  return (
+      <div className={style["mainDiv"]}>
+        {/* <RouterProvider router={routes} /> */}
+        <OTPScreen></OTPScreen>
+      </div>
+  )
+}
 
-const App: React.FC = () => {
-  return <LoginSignupForm formState='login'/>
-};
-
-export default App;
+export default App
