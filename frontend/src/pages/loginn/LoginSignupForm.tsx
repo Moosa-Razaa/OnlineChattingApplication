@@ -8,7 +8,6 @@ import CustomButton from "../../components/btn/CustomButton";
 interface LoginSignupFormProps {
   formState: string;
 }
-
 const LoginSignupForm: React.FC<LoginSignupFormProps> = ({ formState }) => {
   const onFinish = (values: any) => {
     console.log("Received values of form: ", values);
@@ -33,30 +32,41 @@ const LoginSignupForm: React.FC<LoginSignupFormProps> = ({ formState }) => {
               </h2>
 
               <CustomInput
-                maxLength={50}
-                id="username"
-                name="username"
+                name="email"
+                width="small"
+                placeholder="Enter Email"
                 type="text"
-                placeholder="Enter Username"
+                id="email"
+                maxLength={50}
+                rules={[
+                  { required: true, message: "Please input your Username!" },
+                ]}
               />
               <CustomInput
-                maxLength={50}
-                id="password"
+                width="small"
                 name="password"
-                type="password"
                 placeholder="Enter Password"
+                type="password"
+                rules={[
+                  { required: true, message: "Please input your Username!" },
+                ]}
+                id="password"
+                maxLength={50}
               />
 
               {formState === "signup" && (
                 <CustomInput
-                  maxLength={50}
-                  id="confirm-password"
+                  width="small"
+                  rules={[
+                    { required: true, message: "Please input your Username!" },
+                  ]}
                   name="confirm-password"
-                  type="password"
                   placeholder="Confirm Password"
+                  type="password"
+                  id="confirm-password"
+                  maxLength={50}
                 />
               )}
-
               <div className={styles["forgot-password"]}>
                 {formState === "login" && (
                   <Form.Item>
@@ -78,7 +88,7 @@ const LoginSignupForm: React.FC<LoginSignupFormProps> = ({ formState }) => {
                 )}
               </div>
 
-              <CustomButton text={formState} block={true}>
+              <CustomButton text={formState} block width="small">
                 <div className={styles.register}>
                   {formState === "login"
                     ? "New to app"

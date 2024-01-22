@@ -4,25 +4,37 @@ import { FC, ReactNode } from "react";
 
 interface CustomButtonProps {
   text: string;
-  children: ReactNode;
+  width: string;
+  children?: ReactNode;
   block: boolean;
 }
 
-const CustomButton: FC<CustomButtonProps> = ({ text, children, block }) => {
+const CustomButton: FC<CustomButtonProps> = ({
+  text,
+  children,
+  block,
+  width,
+}) => {
   let textContent;
 
   if (text === "login") {
     textContent = "login";
   }
   if (text === "signup") {
-    textContent = "login";
+    textContent = "signup";
   }
   if (text === "verify") {
     textContent = "verify otp";
   }
+  if (text === "save") {
+    textContent = "save";
+  }
+
+  const classs = width === "small" ? styles.btn : styles.largeBtn;
+
   return (
     <Form.Item>
-      <Button block={block} htmlType="submit" className={styles.btn}>
+      <Button block={block} className={classs} htmlType="submit">
         {textContent}
       </Button>
       {children}
