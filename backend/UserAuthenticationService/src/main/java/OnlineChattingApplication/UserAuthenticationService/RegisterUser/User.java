@@ -32,10 +32,6 @@ public class User {
     @NotEmpty
     private String password;
 
-    @Column(name = "salt")
-    @NotEmpty
-    private String salt;
-
     @Column(name = "role")
     private String role;
 

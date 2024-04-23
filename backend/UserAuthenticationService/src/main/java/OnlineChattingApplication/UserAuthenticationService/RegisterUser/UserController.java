@@ -41,7 +41,9 @@ public class UserController {
     @PutMapping("/{id}")
     void UpdateUser(@PathVariable int id, @Valid @RequestBody User user)
     {
-        _userService.UpdateUser(id, user);
+        boolean result = _userService.UpdateUser(id, user);
+        if(result) return;
+        throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid user information!");
     }
 
 //  Get Single User
