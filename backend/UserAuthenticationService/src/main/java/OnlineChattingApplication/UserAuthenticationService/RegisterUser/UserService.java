@@ -33,7 +33,6 @@ public class UserService {
         _userRepository.save(user);
     }
 
-
     boolean UpdateUser(int id, User updatedUser)
     {
         User user = GetUserById(id);
