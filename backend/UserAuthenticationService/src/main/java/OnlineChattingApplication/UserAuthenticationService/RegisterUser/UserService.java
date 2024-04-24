@@ -5,8 +5,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.Optional;
-
 @Service
 public class UserService {
 
@@ -19,6 +17,13 @@ public class UserService {
         _passwordHashingService = passwordHashingService;
     }
 
+    public User GetUserById(int id)
+    {
+        return _userRepository
+                .findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found!"));
+    }
+
     void RegisterNewUser(User user)
     {
         String passwordOfUser = user.getPassword();
@@ -28,16 +33,10 @@ public class UserService {
         _userRepository.save(user);
     }
 
-    Optional<User> GetUserById(int id)
-    {
-        return _userRepository.findById(id);
-    }
 
     boolean UpdateUser(int id, User updatedUser)
     {
-        User user = _userRepository
-                .findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found!"));
+        User user = GetUserById(id);
 
         user.setUsername(updatedUser.getUsername());
         user.setEmail(updatedUser.getEmail());

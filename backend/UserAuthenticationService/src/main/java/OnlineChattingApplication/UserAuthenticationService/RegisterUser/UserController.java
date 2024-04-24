@@ -5,8 +5,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.Optional;
-
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -51,8 +49,6 @@ public class UserController {
     @GetMapping("/{id}")
     User GetUserById(@PathVariable int id)
     {
-        Optional<User> user = _userService.GetUserById(id);
-        if(user.isPresent()) return user.get();
-        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found!");
+        return _userService.GetUserById(id);
     }
 }
