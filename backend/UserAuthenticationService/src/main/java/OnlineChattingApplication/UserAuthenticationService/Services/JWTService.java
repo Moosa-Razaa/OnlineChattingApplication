@@ -1,4 +1,4 @@
-package OnlineChattingApplication.UserAuthenticationService.AuthenticateUser;
+package OnlineChattingApplication.UserAuthenticationService.Services;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -35,6 +35,10 @@ public class JWTService {
     public String GenerateToken(String username) {
         Map<String, Object> claims = new HashMap<>();
         return CreateToken(claims, username);
+    }
+
+    public String GenerateToken(Map<String, Object> claims, UserDetails userDetails) {
+        return CreateToken(claims, userDetails.getUsername());
     }
 
     public Date ExtractExpiration(String token) {
