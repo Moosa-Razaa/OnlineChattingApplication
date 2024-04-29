@@ -3,7 +3,7 @@ package OnlineChattingApplication.UserAuthenticationService.AuthenticateUser;
 import OnlineChattingApplication.UserAuthenticationService.AuthenticateUser.DTOs.UserEmailPasswordDTO;
 import OnlineChattingApplication.UserAuthenticationService.RegisterUser.User;
 import OnlineChattingApplication.UserAuthenticationService.RegisterUser.UserRepository;
-import OnlineChattingApplication.UserAuthenticationService.Utilities.PasswordHashingService;
+import OnlineChattingApplication.UserAuthenticationService.Services.PasswordHashingService;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;

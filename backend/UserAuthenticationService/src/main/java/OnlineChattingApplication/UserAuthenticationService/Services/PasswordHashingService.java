@@ -1,4 +1,4 @@
-package OnlineChattingApplication.UserAuthenticationService.Utilities;
+package OnlineChattingApplication.UserAuthenticationService.Services;
 
 import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -11,6 +11,10 @@ public class PasswordHashingService {
     public PasswordHashingService()
     {
         passwordEncoder = new Argon2PasswordEncoder(16, 32, 1, 6000, 2);
+    }
+
+    public PasswordEncoder GetPasswordEncoder() {
+        return passwordEncoder;
     }
 
     public String GetHashedPassword(String passwordToHash)
