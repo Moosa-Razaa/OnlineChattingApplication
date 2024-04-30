@@ -15,6 +15,8 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
+import java.util.List;
+
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor
@@ -26,9 +28,7 @@ public class SecurityConfiguration {
     public SecurityFilterChain SecurityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable);
 
-        http.authorizeHttpRequests(request -> request.requestMatchers("/user/**").permitAll()
-                .requestMatchers("/login").permitAll()
-                .requestMatchers("/password").permitAll()
+        http.authorizeHttpRequests(request -> request.requestMatchers("/user", "/auth/login", "/auth/password").permitAll()
                 .anyRequest().authenticated()
         );
 
@@ -44,8 +44,8 @@ public class SecurityConfiguration {
         CorsConfiguration configuration = new CorsConfiguration();
 
         configuration.addAllowedOrigin("*");
-        configuration.addAllowedHeader("*");
-        configuration.addAllowedMethod("*");
+        configuration.setAllowedHeaders(List.of("Authorization","Content-Type"));
+        configuration.setAllowedMethods(List.of("GET", "POST", "PATCH", "DELETE", "PUT"));
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);

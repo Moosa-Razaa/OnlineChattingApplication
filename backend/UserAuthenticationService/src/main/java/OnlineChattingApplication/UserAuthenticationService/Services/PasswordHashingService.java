@@ -22,9 +22,8 @@ public class PasswordHashingService {
         return passwordEncoder.encode(passwordToHash);
     }
 
-    public boolean VerifyPassword(String hashedPasswordFromDatabase, String passwordToHash)
+    public boolean VerifyPassword(String passwordToHash, String hashedPasswordFromDatabase)
     {
-        String hashedPassword = passwordEncoder.encode(passwordToHash);
-        return passwordEncoder.matches(hashedPassword, hashedPasswordFromDatabase);
+        return passwordEncoder.matches(passwordToHash, hashedPasswordFromDatabase);
     }
 }

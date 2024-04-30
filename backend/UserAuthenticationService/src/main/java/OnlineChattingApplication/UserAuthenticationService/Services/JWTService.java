@@ -32,13 +32,16 @@ public class JWTService {
         return claimsResolver.apply(claims);
     }
 
-    public String GenerateToken(String username) {
-        Map<String, Object> claims = new HashMap<>();
-        return CreateToken(claims, username);
+    public String GenerateToken(UserDetails userDetails) {
+        return CreateToken(new HashMap<>(), userDetails.getUsername());
     }
 
-    public String GenerateToken(Map<String, Object> claims, UserDetails userDetails) {
-        return CreateToken(claims, userDetails.getUsername());
+    public String GenerateToken(Map<String, Object> extraClaims, UserDetails userDetails) {
+        return CreateToken(extraClaims, userDetails.getUsername());
+    }
+
+    public long GetExpirationTime() {
+        return jwtExpirationTime;
     }
 
     public Date ExtractExpiration(String token) {
