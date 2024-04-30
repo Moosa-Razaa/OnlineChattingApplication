@@ -36,10 +36,6 @@ public class JWTService {
         return CreateToken(new HashMap<>(), userDetails.getUsername());
     }
 
-    public String GenerateToken(Map<String, Object> extraClaims, UserDetails userDetails) {
-        return CreateToken(extraClaims, userDetails.getUsername());
-    }
-
     public long GetExpirationTime() {
         return jwtExpirationTime;
     }
